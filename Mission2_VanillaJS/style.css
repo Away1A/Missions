@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    outline: 0;
+    
+  }
+  
+  body
+  {
+    overflow-x: hidden;
+    background: rgb(0, 0, 0);
+    min-height: 100vh;
+  }
+
+
+hr{
+    width: 50px;
+    border-color: transparent;
+    border-right-color: rgba(255, 255, 255, 0.7);
+    border-right-width: 50px;
+    position: absolute;
+    bottom: 100%;
+    transform-origin: 100% 50%;
+    animation-name: rain;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes rain {
+    from {
+     transform: rotate(105deg) translateX(0);
+    }
+   
+    to {
+     transform: rotate(105deg) translateX(calc(100vh + 20px));
+    }
+   }
+   
+body section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#road {
+    z-index: 3;
+}
+
+#mountain {
+    z-index: 1;
+    top: 150px;
+}
+
+#sky {
+    z-index: 0;
+}
+
+#moon {
+    z-index: 1;
+    animation: swing 4s infinite ease-in-out;
+}
+
+#header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+#header .logo
+{
+  color: #094b65;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+#header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a
+{
+  text-decoration: 0;
+  padding: 6px 15px;
+  color: #094b65;
+  border-radius: 20px;
+}
+
+#header ul li a.active,
+#header ul li a:hover
+{
+  background: #094b65;
+  color: #fff;
+}
+
+
+.welcome {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome h1 {
+    font-size: 10rem;
+    margin-top: 100%;
+    padding-left: 70px; 
+    padding-right: 70px; 
+}
+
+.welcome p {
+    margin-top: 50px;
+    font-weight: normal;
+    line-height: 1.6;
+    padding-left: 70px; 
+    padding-right: 70px; 
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-30deg); }
+    20% {transform:scale(.95);}
+    50% { transform: rotate(30deg); }
+    80% {transform:scale(.95);}
+  }
+  
+  #sweetlandia {
+    animation: swing 2s infinite ease-in-out;
+  }
+  
+  .event{
+    margin:50px auto;
+    text-align:center;
+  }
+
+  .moon {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    animation: shine 2s ease-in-out infinite;
+    background-color: rgb(230, 224, 224);
+    box-shadow: 0px 0px 8px 2px rgba(235, 235, 231, 0.301);
+    position: relative;
+    overflow: hidden;
+}
+.details {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: rgba(165, 165, 165, 0.089);
+}
+.details.one {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.two {
+    position: absolute;
+    top: 60px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset -2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.three {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.four.small {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.585);
+}
+
+.moon_outer {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.t1 {
+    margin-left: 10px;
+}
+
+
+.loader-svg {
+    display: flex;
+    align-items: flex-end;
+}
+.loader-svg .mid svg polygon {
+    stroke-dasharray: 50;
+    animation: midanim 2.5s linear infinite;
+}
+@keyframes midanim {
+  to {
+    stroke-dashoffset:100; 
+  }
+}
+.loader-svg svg polygon {
+    stroke-dasharray: 25;
+    animation: anim 2s linear infinite;
+}
+@keyframes anim {
+  to {
+    stroke-dashoffset:100; 
+  }
+}
+.loader-text {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+.loader-text span {
+  color: transparent;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    animation: dash 1.5s infinite;
+}
+@keyframes dash {
+  from {
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+  }
+  to {
+    color: rgb(255, 255, 255);
+  } 
+}
+ 
+.scroll-to-top {
+    position: relative;
+  }
+  
+  .btn-position {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 20;
+  }
+  
+  .btn-style {
+    background-color: #551b54;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    animation: movebtn 3s ease-in-out infinite;
+    transition: all 0.5s ease-in-out;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .icon-style:hover {
+    animation: none;
+    background: #fff;
+    color: #551b54;
+    border: 2px solid #551b54;
+  }
+  
+  @keyframes movebtn {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(20px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    75% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
